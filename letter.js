@@ -1,7 +1,7 @@
-Display = function(word){
-	this.wordArray = word.split(''),
-	this.arrayOfDashes = [],
-	this.updated,
+var Display = function(word){
+	this.wordArray = word.split('');
+	this.arrayOfDashes = [];
+	// this.updated;
 	this.originalDisplay = function(){
 		for(i=0;i<this.wordArray.length;i++){
 			if(this.wordArray[i] === ' '){
@@ -27,3 +27,4 @@ Display = function(word){
 	this.checkForWin = function(){
 	}
 }
+module.exports = Display;

@@ -1,6 +1,6 @@
 var inquirer = require('inquirer');
 var words = require('./game.js');
-var display = require('./letter.js');
+var Display = require('./letter.js');
 var check = require('./word.js');
 
 var currentWord;
@@ -12,7 +12,7 @@ var checkLetter = [];
 var wordsPlayed = [];
 
 function selectRandomWord(){
-	var x = Math.floor(Math.random() * 27)
+	var x = Math.floor(Math.random() * 17)
 	currentWord = words.possibleWords[x];
 	if(wordsPlayed.includes(currentWord)){
 		selectRandomWord();
